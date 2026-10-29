@@ -2,7 +2,7 @@
 
 ## Screenshot
 
-![](./)
+![](./screenshot-article-preview-component.png)
 
 ## Links
 
