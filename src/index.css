@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import "tailwindcss";
+
+@theme {
+	--font-manrope: "Manrope", sans-serif;
+
+	--color-bg-body: #ecf2f8;
+	--color-bg-card: #ffffff;
+	--color-shadow: #c9d5e1;
+
+	--color-primary: #48556a;
+	--color-secondary: #6e8098;
+	--color-tertiary: #9daec2;
+	--color-accent: #fb6f92;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	background-color: var(--color-bg-body);
+	color: var(--color-primary);
+	font-family: var(--font-manrope);
+}
+
+button:focus-visible,
+a:focus-visible {
+	outline: 2px solid var(--color-accent);
+	outline-offset: 4px;
+}
+
+/* Clip Path - Share Panel */
+.share-panel::before {
+	content: "";
+
+	position: absolute;
+	bottom: -12px;
+	left: 50%;
+	transform: translateX(-50%);
+
+	width: 24px;
+	height: 12px;
+
+	background-color: var(--color-primary);
+
+	clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+/* Reponsive Design - Tablet */
+@media (max-width: 765px) {
+	.share-panel::before {
+		content: none;
+	}
+}
+/* End of Reponsive Design - Tablet */
+/* End of Clip Path - Share Panel */
